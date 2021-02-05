@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+          margin:0;
+          padding:0;
+          overflow: hidden; 
+        }
+    </style>
+    <title>Basic With Canvas</title>
+</head>
+<body>
+    <canvas id="canvas" height="1000" width="1000">
+
+    </canvas>
+
+    <script>
+        // Access the canvas element so we can work with it.
+
+        const canvas = document.getElementById("canvas");
+        // Get the context
+        const ctx = canvas.getContext("2d");
+        
+    
+        
+        ctx.strokeStyle = "red";
+        ctx.strokeRect(0,0,300,300);
+
+        /* for(let i = 0; i <= canvas.width; i += 30) {
+           ctx.rotate(80 * Math.PI / 180)
+
+           ctx.fillRect(i,0,30,30)
+           ctx.fillRect(i,i,30,30)
+        } */
+
+       // ctx.fillStyle = "black"
+       /*  // Create a rectangle that is 1000 x 1000 in size.
+        ctx.fillRect(0,0,30,30);
+
+        let increment = 0;
+
+        document.addEventListener("click", () =>{
+            ctx.fillStyle = "white"
+            ctx.fillRect(0,0,canvas.width,canvas.height);
+
+
+            increment += 30;
+            ctx.fillStyle = "black"
+            ctx.fillRect(0,increment,30,30);
+            ctx.fillRect(increment,0,30,30);
+        }); */
+        
+    </script>
+</body>
+</html>
