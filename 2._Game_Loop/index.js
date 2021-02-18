@@ -5,7 +5,7 @@
     const clockWidth = 360;
     
 
-function setupAnalogClock(cw) {
+function setupClock(cw) {
     getDateInString();
     tick();
     window.setInterval(tick, 1000);
@@ -98,7 +98,7 @@ function drawHand(length, ang) {
     ctx.restore();
 }
 
-setupAnalogClock(360);
+setupClock(360);
 
 function getDateInString() {
     const dateToBrowser = new Date();
