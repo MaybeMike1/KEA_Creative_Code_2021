@@ -15,23 +15,27 @@
 </head>
 <body>
     <canvas id="canvas" height="1000" width="1000">
-
+        
     </canvas>
 
+    <script src="moreShapes.js"></script>
     <script>
+        
         // Access the canvas element so we can work with it.
 
-        const canvas = document.getElementById("canvas");
+        /* const canvas = document.getElementById("canvas");
         // Get the context
         const ctx = canvas.getContext("2d");
+        ctx.fillRect(0,0,1000,1000)
+        function shiftPosition(){
+            console.log("Function is called on click")
+        } */
         
-    
-        
-        ctx.strokeStyle = "red";
-        ctx.strokeRect(0,0,300,300);
+        //ctx.strokeStyle = "red";
+        //ctx.strokeRect(0,0,300,300);
 
-        /* for(let i = 0; i <= canvas.width; i += 30) {
-           ctx.rotate(80 * Math.PI / 180)
+         /* for(let i = 0; i <= canvas.width; i += 30) {
+           ctx.rotate(Math.random(80 * Math.PI / 180))
 
            ctx.fillRect(i,0,30,30)
            ctx.fillRect(i,i,30,30)
