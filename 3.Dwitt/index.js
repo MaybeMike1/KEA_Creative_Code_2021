@@ -3,7 +3,7 @@ console.log('Hello')
 const   Engine = Matter.Engine,
         Render = Matter.Render,
         World = Matter.World,
-        Bodies = Matter.Bodies;
+        Bodies = Mattzer.Bodies;
 
 
 const engine = Engine.create();
@@ -68,6 +68,8 @@ function moveElement(event) {
             case 37:
                 boxArr.map(box => box.position.x--);
                 break;
+            case 32:
+                boxArr.map(box => )    
             default:
                 console.log('Keypress does not have any action');
                 break;
@@ -112,7 +114,6 @@ let leftBar = Bodies.rectangle(0,50,60,1560, {isStatic: true})
 let centerBar = Bodies.rectangle(1000,50,60,1560, {isStatic: true})
 let rightBar = Bodies.rectangle(1900,50,60,1560, {isStatic: true})
 
-/* Matter.Events.on(boxA,) */
 World.add(engine.world, [boxA, boxB, boxC, boxD, boxF, circleA, circleB, circleC, circleD, ground, topBar,leftBar,centerBar,rightBar, mouseConstraint]);
 
 
