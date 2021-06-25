@@ -24,23 +24,6 @@ class Particle {
             this.radius -= 0.14;
         }  
     }
-/*     drawRipple() {
-        ctx1.strokeStyle= 'rgba(155,155,155, ' + this.opacity + ')';
-        ctx1.beginPath();
-        ctx1.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx1.stroke();
-        ctx1.closePath();
-    }
-    ripple() {
-        if (this.radius < 50) {
-            this.radius += 0.5;
-            this.x -= 0.1;
-            this.y -= 0.05;
-        }
-        if(this.opacity > 0) {
-            this.opacity -= 0.005
-        }
-    } */
 }
 
 function handleParticles() { 
@@ -65,7 +48,7 @@ function handleParticles() {
             particlesArray.unshift(new Ripple(character.x, character.y)); 
         }
         for(let i = 0; i < enemiesArray.length; i++) {
-            if (collistion(character,enemiesArray[i])) {
+            if (collision(character,enemiesArray[i])) {
                 resetGame();
             }
         }

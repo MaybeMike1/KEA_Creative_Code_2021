@@ -16,7 +16,7 @@
           overflow: hidden; 
         }
     </style>
-    <title>Exam Project</title>
+    <title>Game Simulator - Dogde Energy Balls</title>
 </head>
 <body>
     <div id="music-controls">
@@ -25,6 +25,8 @@
             <button type="button" class="btn btn-secondary" onclick="pauseMusic()">Pause Music</button>
             <button type="button" class="btn btn-danger" onclick="stopMusic()">Stop Music</button>
         </div>
+
+        
         
         <b>Configuration for sound on ingame movement</b>
         <p>Welcome to Dogde Energy Balls</p>
@@ -55,9 +57,11 @@
     <script src="ripples.js"></script>
     <script src="obstacles.js"></script>
     <script src="utilities.js"></script>
+    
     <script>
+    
         const howler = new Howl({
-            src : ["song.mp3"],
+            src : ["assets/song.mp3"],
             autoplay: false,
             loop: false,
             volume: 0.125,

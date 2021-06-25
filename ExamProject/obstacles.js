@@ -13,11 +13,15 @@ class Obstacle {
     draw() {
         if(this.type === 'turtle') {
             if(frame % this.randomise === 0) {
-                if (this.frameX >= 1) this.frameX = 0;
+                if (this.frameX >= 1){
+                    this.frameX = 0;
+                } 
                 else this.frameX++;
             }
             ctx1.drawImage(turtle, this.frameX * 70, this.frameY * 70, 70, 70, this.x,this.y ,this.width,this.height); 
         } else if (this.type === 'log') {
+            
+            /* ctx1.fillRect(this.x, this.y, this.width, this.height); */
             ctx1.drawImage(log, this.x, this.y, this.width, this.height);
         } else {
             /* ctx1.fillRect(this.x, this.y,this.width,this.height); */
@@ -43,12 +47,12 @@ class Obstacle {
 
 function initObstacles() {
     for (let i = 0; i < 2; i++) {
-        let x = i * 350;
+        let x = i * 400;
         enemiesArray.push(new Obstacle(x, canvas.height - grid * 2 - 20, grid , grid, 1, 'enemy'));
     }
 
     for (let i = 0; i < 2; i++) {
-        let x = i * 300;
+        let x = i * 400;
         enemiesArray.push(new Obstacle(x, canvas.height - grid * 3 - 20, grid, grid, -5, 'enemy'));
     }
 
@@ -79,7 +83,7 @@ function handleObstacles() {
         logsArray[i].draw();
     }
     for(let i = 0; i < enemiesArray.length; i++) {
-        if(collistion(character, enemiesArray[i])) {
+        if(collision(character, enemiesArray[i])) {
             console.log('Hit');
             resetGame();
         }
@@ -89,7 +93,7 @@ function handleObstacles() {
         isSafe = false;
 
         for (let i = 0; i < logsArray.length; i++) {
-            if (collistion(character, logsArray[i])) {
+            if (collision(character, logsArray[i])) {
                 character.x += logsArray[i].speed;
                 isSafe = true;
             }

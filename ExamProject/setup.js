@@ -35,7 +35,7 @@ canvas.width = 600;
 //Global Variables for game rules and variable counts
 const grid = 80;
 let keys = [];
-let score = 0;
+let level = 1;
 let collisionCount = 0;
 let frame = 0;
 let gameSpeed = 1;
