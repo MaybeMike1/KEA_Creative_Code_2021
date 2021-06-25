@@ -92,8 +92,8 @@ function getRandomNumber(min, max) {
 
 let nodesArr = []
 
-const submitBottun = document.getElementById("submitButton");
-submitBottun.addEventListener('click', () => {
+const submitButton = document.getElementById("submitButton");
+submitButton.addEventListener('click', () => {
     nodesArr = nodesToArray();
 })
 

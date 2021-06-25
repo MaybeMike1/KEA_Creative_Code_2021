@@ -28,8 +28,7 @@ class Particle {
 
 function handleParticles() { 
     if (((keys["ArrowLeft"] || keys["ArrowUp"] || keys["ArrowRight"]  || keys["ArrowDown"])) && character.y > 250 && particlesArray.length < maxParticles + 10) {
-        for (let i = 0; i < 10; i++) {
-            
+        for (let i = 0; i < 10; i++) {          
             particlesArray.unshift(new Particle(character.x, character.y));
         }
     }
@@ -45,7 +44,7 @@ function handleParticles() {
 
     if((keys["ArrowLeft"] || keys["ArrowUp"] || keys["ArrowRight"]  || keys["ArrowDown"])) {
         for (let i = 0; i < 20; i++) {
-            particlesArray.unshift(new Ripple(character.x, character.y)); 
+            particlesArray.unshift(new Particle(character.x, character.y)); 
         }
         for(let i = 0; i < enemiesArray.length; i++) {
             if (collision(character,enemiesArray[i])) {
